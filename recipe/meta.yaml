@@ -14,7 +14,7 @@ build:
     - esbonio = esbonio.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
     - python >=3.6
   run:
     - appdirs
-    - pygls >=0.11.2,<0.12.0
+    - pygls >=0.11.2
     - pyspellchecker
     - python >=3.6
     - sphinx
