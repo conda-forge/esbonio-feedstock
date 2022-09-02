@@ -12,6 +12,7 @@ source:
 build:
   entry_points:
     - esbonio = esbonio.__main__:main
+    - esbonio-sphinx = esbonio.lsp.sphinx.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
@@ -34,6 +35,7 @@ test:
   commands:
     - pip check
     - esbonio --help
+    - esbonio-sphinx --help
   requires:
     - pip
 
