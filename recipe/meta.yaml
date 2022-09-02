@@ -12,9 +12,10 @@ source:
 build:
   entry_points:
     - esbonio = esbonio.__main__:main
+    - esbonio-sphinx = esbonio.lsp.sphinx.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,7 +23,7 @@ requirements:
     - python >=3.6
   run:
     - appdirs
-    - pygls >=0.11.2,<0.12.0
+    - pygls >=0.11.2
     - pyspellchecker
     - python >=3.6
     - sphinx
@@ -34,6 +35,7 @@ test:
   commands:
     - pip check
     - esbonio --help
+    - esbonio-sphinx --help
   requires:
     - pip
 
