@@ -1,5 +1,5 @@
 {% set name = "esbonio" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/esbonio-{{ version }}.tar.gz
-  sha256: 1ebddcc9683ecd619e377e84ef232f529de5bef2af49ff295d1826a8afd0d32e
+  sha256: 1be87c6f253005a3e39efeaa72d0a1861c8b72bc27d52a5766f6fcd82600095a
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - esbonio-sphinx = esbonio.lsp.sphinx.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
