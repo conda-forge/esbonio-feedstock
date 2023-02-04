@@ -27,7 +27,7 @@ requirements:
     - pyspellchecker
     - python >=3.7
     - sphinx
-    - typing-extensions  # [py<38]
+    - typing-extensions
 
 test:
   imports:
