@@ -1,11 +1,11 @@
-About esbonio
-=============
+About esbonio-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/esbonio-feedstock/blob/main/LICENSE.txt)
 
 Home: https://swyddfa.github.io/esbonio/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/esbonio-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Language Server for Sphinx projects.
 
