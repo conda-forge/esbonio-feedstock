@@ -22,8 +22,8 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - appdirs
-    - pygls >=1.0.0
+    - platformdirs
+    - pygls >=1.1.0
     - pyspellchecker
     - python >=3.7
     - sphinx
