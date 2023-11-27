@@ -1,5 +1,5 @@
 {% set name = "esbonio" %}
-{% set version = "0.16.2" %}
+{% set version = "0.16.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/esbonio-{{ version }}.tar.gz
-  sha256: 72824a3373f293f5f4e2ad2bbd6a242010344e27d5b1cdffb21fb6fa37dc5864
+  sha256: fd237016410c0a31d2d6c773323901a6071721f5ec86e66fffc0bb92e86ffdbd
 
 build:
   entry_points:
