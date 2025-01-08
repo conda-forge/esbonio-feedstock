@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/esbonio-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/esbonio-{{ version }}.tar.gz
   sha256: acab2e16c6cf8f7232fb04e0d48514ce50566516b1f6fcf669ccf2f247e8b10f
 
 build:
@@ -15,18 +15,18 @@ build:
     - esbonio-sphinx = esbonio.lsp.sphinx.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - setuptools
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - platformdirs
     - pygls >=1.1.0
     - pyspellchecker
-    - python >=3.7
+    - python >={{ python_min }}
     - sphinx
     - typing-extensions
 
@@ -39,6 +39,7 @@ test:
     - esbonio-sphinx --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://swyddfa.github.io/esbonio/
