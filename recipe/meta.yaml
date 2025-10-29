@@ -12,7 +12,7 @@ source:
 build:
   entry_points:
     - esbonio = esbonio.__main__:main
-    - esbonio-sphinx = esbonio.lsp.sphinx.cli:main
+    - esbonio-sphinx = esbonio.sphinx_agent.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -20,19 +20,22 @@ build:
 requirements:
   host:
     - pip
-    - setuptools
     - python {{ python_min }}
+    - hatchling
   run:
-    - platformdirs
-    - pygls >=1.1.0
-    - pyspellchecker
     - python >={{ python_min }}
+    - aiosqlite
+    - platformdirs
+    - docutils
+    - pygls >=2.0
+    - tomli
+    - websockets
     - sphinx
-    - typing-extensions
 
 test:
   imports:
-    - esbonio.lsp
+    - esbonio.server
+    - esbonio.sphinx_agent
   commands:
     - pip check
     - esbonio --help
