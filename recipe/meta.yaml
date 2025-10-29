@@ -12,7 +12,6 @@ source:
 build:
   entry_points:
     - esbonio = esbonio.__main__:main
-    - esbonio-sphinx = esbonio.sphinx_agent.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -30,12 +29,11 @@ requirements:
     - pygls >=2.0
     - tomli
     - websockets
-    - sphinx
 
 test:
   imports:
     - esbonio.server
-    - esbonio.sphinx_agent
+    - esbonio.sphinx_agent.types
   commands:
     - pip check
     - esbonio --help
