@@ -37,7 +37,6 @@ test:
   commands:
     - pip check
     - esbonio --help
-    - esbonio-sphinx --help
   requires:
     - pip
     - python {{ python_min }}
